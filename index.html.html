@@ -421,6 +421,32 @@
       .hero-actions { display: grid; grid-template-columns: 1fr; }
     }
   </style>
+  <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+
+<script type="module">
+  import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+  createChat({
+    webhookUrl: 'IDE_JON_A_PRODUCTION_WEBHOOK_URL',
+    mode: 'window',
+    showWelcomeScreen: true,
+    loadPreviousSession: true,
+    enableStreaming: true,
+    initialMessages: [
+      'Szia! 👋',
+      'Miben segíthetek?'
+    ],
+    i18n: {
+      en: {
+        title: 'Szia! 👋',
+        subtitle: 'Írj nekünk, és segítünk.',
+        footer: '',
+        getStarted: 'Új beszélgetés',
+        inputPlaceholder: 'Írd be az üzeneted...'
+      }
+    }
+  });
+</script>
 </head>
 <body>
   <header class="topbar">
